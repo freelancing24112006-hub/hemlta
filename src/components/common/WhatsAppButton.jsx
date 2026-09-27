@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${brand.contact.whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
   return (
-    <div className="fixed bottom-20 sm:bottom-6 left-5 z-40 flex items-center group">
+    <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex items-center group">
       {/* Floating Action Button */}
       <a
         href={whatsappUrl}

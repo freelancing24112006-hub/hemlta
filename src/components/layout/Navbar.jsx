@@ -52,20 +52,20 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Real Top Navigation Header (Seamless transparent on home, frosted on scroll) */}
+      {/* Real Top Navigation Header (Seamless frosted glass, sleek on scroll) */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isHome && !isScrolled
-            ? 'bg-transparent py-4 sm:py-5 border-none shadow-none'
-            : 'bg-[#160D08]/96 backdrop-blur-md border-b border-[#3D2516] shadow-xl py-2.5 sm:py-3'
+            ? 'bg-[#140C07]/70 sm:bg-[#140C07]/35 backdrop-blur-md border-b border-white/5 py-2.5 sm:py-3.5'
+            : 'bg-[#120B06]/95 backdrop-blur-xl border-b border-[#F3B748]/20 shadow-[0_4px_24px_rgba(0,0,0,0.55)] py-2 sm:py-2.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* Real Logo component (Arched vintage plaque matching reference) */}
-            <Link to="/" className="flex items-center gap-2 group shrink-0" title="Home">
-              <LogoBadge size="compact" />
+            {/* Sleek Luxury Brand Mark */}
+            <Link to="/" className="flex items-center group shrink-0" title="घरगुती स्वाद - Home">
+              <LogoBadge variant="nav" />
             </Link>
 
             {/* Real Desktop Navigation Links */}
@@ -163,7 +163,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 flex flex-col justify-between bg-[#1C120C] text-white md:hidden shadow-2xl animate-in fade-in duration-200">
           <div className="p-4 border-b border-[#3D2516] flex items-center justify-between">
-            <LogoBadge size="compact" />
+            <LogoBadge variant="nav" />
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="p-2 text-[#FAF0DB] hover:bg-white/10 rounded-lg transition-colors cursor-pointer"
