@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Devanagari", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-marathi: "Noto Sans Devanagari", "Rozha One", sans-serif;
+  --font-marathi-heading: "Rozha One", "Noto Sans Devanagari", serif;
+
+  --color-brand-cream: #FAF7F2;
+  --color-brand-ivory: #FFFDF9;
+  --color-brand-border: #E8DCB8;
+  --color-brand-brown-dark: #2C1E16;
+  --color-brand-brown: #4A3728;
+  --color-brand-brown-light: #6B5545;
+  --color-brand-gold: #B07A25;
+  --color-brand-gold-soft: #FAF0DB;
+  --color-brand-saffron: #C8822B;
+  --color-brand-green: #3D6B52;
+  --color-brand-green-light: #E7F3EC;
+}
+
+@layer base {
+  body {
+    background-color: #FAF7F2;
+    color: #2C1E16;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B59D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B07A25;
+}
+
+/* Subtle shadows */
+.shadow-xs {
+  box-shadow: 0 1px 3px rgba(44, 30, 22, 0.04), 0 1px 2px rgba(44, 30, 22, 0.02);
+}
+.shadow-2xs {
+  box-shadow: 0 1px 2px rgba(44, 30, 22, 0.03);
+}
+
+/* Responsive utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3D Depth Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-1400 {
+  perspective: 1400px;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* 3D Physical Lighting Shadows */
+.shadow-3d-frame {
+  box-shadow: 
+    -24px 38px 70px -12px rgba(44, 30, 22, 0.32),
+    0 14px 28px -6px rgba(44, 30, 22, 0.15),
+    inset 0 1px 3px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 5px rgba(44, 30, 22, 0.12);
+}
+
+.shadow-3d-card {
+  box-shadow: 
+    0 28px 55px -10px rgba(44, 30, 22, 0.38),
+    0 12px 24px -5px rgba(44, 30, 22, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.shadow-3d-badge {
+  box-shadow: 
+    0 18px 32px -6px rgba(44, 30, 22, 0.28),
+    0 6px 12px -3px rgba(44, 30, 22, 0.12);
+}
